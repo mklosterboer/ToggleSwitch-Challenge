@@ -6,7 +6,7 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    color: #16c0ff;
+    color: #0af;
     font-size: 1.2em;
 }
 
@@ -20,10 +20,50 @@ body.dark-theme {
 }
 
 body.dark-theme h2, body.dark-theme p {
-    color: #ff1616;
+    color: #f22;
 }
 
 .text {
     max-width: 600px;
     text-align: center;
+}
+
+.toggle-contianer input[type=checkbox] {
+    display: none;
+}
+
+.toggle-contianer label {
+    background-color: #0af;
+    border: 2px solid #06C;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 100px;
+    height: 50px;
+}
+
+.toggle-contianer label::after {
+    background-color: #06C;
+    border-radius: 50%;
+    content: ' ';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    transition: all ease-in-out 0.3s;
+    width: 42px;
+    height: 42px;
+}
+
+.toggle-contianer input[type='checkbox']:checked ~ label {
+    background-color: #f22;
+    border-color: #811;
+}
+
+.toggle-contianer input[type='checkbox']:checked ~ label::after {
+    background-color: #811;
+    transform: translateX(50px);
 }
