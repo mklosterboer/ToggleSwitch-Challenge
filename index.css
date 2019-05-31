@@ -23,7 +23,7 @@ body.dark-theme h2, body.dark-theme p {
     color: #f22;
 }
 
-.text {
+.text-container {
     max-width: 600px;
     text-align: center;
 }
